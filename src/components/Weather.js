@@ -21,7 +21,7 @@ function Weather(props) {
     const [hourTemp, setHourTemp] = useState([]);
     const [icon, setIcon] = useState("");
     const [region, setRegion] = useState("");
-    const key = '59f584dffd1f435e3a89e00798792587';
+    const key = process.env.REACT_APP_WEATHER_API_KEY;
 
     useEffect(() => {
         fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityValue + '&appid=' + key)
